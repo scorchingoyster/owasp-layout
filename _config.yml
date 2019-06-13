@@ -25,6 +25,8 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
+sass:
+  sass_dir: _sass
 markdown: kramdown
 theme: minima
 plugins:
