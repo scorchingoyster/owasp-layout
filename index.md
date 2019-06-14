@@ -8,14 +8,15 @@ permalink: /
 
 ---
 
-<img src="https://via.placeholder.com/400x400" alt="">
-
-<section>
-  <h1>What is the OWASP Foundation?</h1>
-  <p>The OWASP Foundation came online on December 1st, 2001 it was established as a not-for-profit charitable organization in the United States on April 21, 2004, to ensure the ongoing availability and support for our work at OWASP. OWASP is an international organization and the OWASP Foundation supports OWASP efforts around the world. OWASP is an open community dedicated to enabling organizations to conceive, develop, acquire, operate, and maintain applications that can be trusted. All of the OWASP tools, documents, forums, and chapters are free and open to anyone interested in improving application security. We advocate approaching application security as a people, process, and technology problem because the most effective approaches to application security include improvements in all of these areas. We can be found at www.owasp.org. </p>
+<section class="homepage-promo">
+  <img src="https://via.placeholder.com/400x400" alt="">
 </section>
 
-<a href="">Find a local chapter.</a>
+<section class="homepage-welcome">
+  <h1>What is the OWASP Foundation?</h1>
+  <p>The OWASP Foundation came online on December 1st, 2001 it was established as a not-for-profit charitable organization in the United States on April 21, 2004, to ensure the ongoing availability and support for our work at OWASP. OWASP is an international organization and the OWASP Foundation supports OWASP efforts around the world. OWASP is an open community dedicated to enabling organizations to conceive, develop, acquire, operate, and maintain applications that can be trusted. All of the OWASP tools, documents, forums, and chapters are free and open to anyone interested in improving application security. We advocate approaching application security as a people, process, and technology problem because the most effective approaches to application security include improvements in all of these areas. We can be found at www.owasp.org. </p>
+  <a href="">Find a local chapter.</a>
+</section>
 
 <section class="homepage-project">
   <h2>Spotlight: Zed Attack Proxy</h2>

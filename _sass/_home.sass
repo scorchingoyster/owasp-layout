@@ -1,0 +1,20 @@
+.home 
+  display: grid
+  grid-template-rows: 100px 1fr 150px
+  grid-template-columns: 1fr
+  grid-template-areas: "header" "content" "footer"
+
+header
+  grid-area: header
+
+main
+  grid-area: content
+
+footer
+  grid-area: footer
+  
+@media screen and (min-width: 600px)
+  main
+    display: grid
+    grid-template-rows: 1fr 1fr 1fr
+    grid-template-columns: 1fr 1fr  
