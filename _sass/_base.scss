@@ -1,0 +1,81 @@
+// font imports
+@font-face {
+  font-family: 'roboto_mono';
+  src: url('../fonts/robotomono-regular.woff2') format('woff2'),
+        url('../fonts/robotomono-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'titillium_bold';
+  src: url('../fonts/titilliumweb-bold.woff2') format('woff2'),
+        url('../fonts/titilliumweb-bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'titillium_bold_italic';
+  src: url('../fonts/titilliumweb-bolditalic.woff2') format('woff2'),
+        url('../fonts/titilliumweb-bolditalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'titillium_italic';
+  src: url('../fonts/titilliumweb-italic.woff2') format('woff2'),
+        url('../fonts/titilliumweb-italic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'titillium';
+  src: url('../fonts/titilliumweb-regular.woff2') format('woff2'),
+        url('../fonts/titilliumweb-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ubuntu_medium';
+  src: url('../fonts/ubuntu-medium.woff2') format('woff2'),
+        url('../fonts/ubuntu-medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'ubuntu';
+    src: url('../fonts/ubuntu-regular.woff2') format('woff2'),
+            url('../fonts/ubuntu-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+// font declarations
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'titillium_bold', sans-serif;
+}
+
+body {
+  font-family: 'titillium', sans-serif;
+}
+
+em {
+  font-family: 'titillium_italic', sans-serif;
+}
+
+nav {
+  font-family: 'ubuntu', sans-serif;
+}
+
+code {
+  font-family: 'roboto_mono', monospace;
+}
+
+.callout-link {
+  font-family: 'ubuntu_medium', sans-serif;
+}
