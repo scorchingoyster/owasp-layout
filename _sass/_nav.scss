@@ -1,7 +1,76 @@
-.top-nav, .bot-nav {
-  display: flex;
+.top-nav {
+  button {
+    @include cta-button;
+  }
 }
-  
-.top-nav ul>li, .bot-nav ul>li {
+
+// desktop nav
+header {
+  max-height: $grid-val * 3; // 90px
+}
+
+.desktop-logo {
   display: inline-block;
+  img {
+    width: 100%;
+    max-width: 180px;
+  }
+}
+
+.site-search {
+  width: 100%;
+  max-width: $grid-val * 8; // 240px
+  border: 2px solid #dddddd;
+  padding: 6px;
+  &:focus {
+    border-color: $cta-blue;
+  }
+  &::placeholder {
+    color: grey;
+  }
+}
+
+.top-nav, .bot-nav {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-nav,
+.bot-nav {
+  ul {
+    margin: 0;
+    & > li {
+      display: inline-block;
+    }
+    & a {
+      @include nav-link;
+    }
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  .alt-nav {
+    @include hide-el;
+  }
+}
+
+// mobile nav 
+
+.alt-logo {
+  display: flex;
+  margin: $grid-val/2 0;
+  justify-content: center;
+  img {
+    width: 100%;
+    max-width: $grid-val * 7; // 210px
+  }
+}
+
+@media screen and (max-width: 1019px) {
+  .top-nav,
+  .bot-nav {
+    @include hide-el;
+  }
 }
