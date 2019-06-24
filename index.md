@@ -10,7 +10,6 @@ permalink: /
 
 <section class="homepage-promo">
   <img src="https://via.placeholder.com/400x400" alt="">
-  <code>Test this chunk function_dude()</code>
 </section>
 
 <section class="homepage-welcome">

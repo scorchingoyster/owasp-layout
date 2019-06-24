@@ -76,6 +76,10 @@ $grid-val: 30px;
   opacity: 0.0;
 }
 
+.hide-el { // for easy reference use outside of SCSS
+  @include hide-el;
+}
+
 @mixin nav-link {
   margin: 0 9px;
   text-decoration: none;
@@ -91,7 +95,6 @@ $grid-val: 30px;
 
 @mixin cta-button {
   padding: 9px 15px;
-  margin: 6px 0;
   border-width: 0;
   border-radius: 4.5px;
   background-color: $cta-blue;
