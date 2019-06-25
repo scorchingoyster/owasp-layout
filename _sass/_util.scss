@@ -1,3 +1,9 @@
+/*
+SCSS and styling utilities
+variables, mixins, font specs
+*/
+
+
 // variables
 $fa-font-path: "/assets/fontawesome";
 $font-path: "/assets/font";
@@ -13,12 +19,12 @@ $content-bp: $grid-val*28; // 840px
 
 // mixins
 @mixin hide-el {
+  display: none;
   position: absolute;
   left: -99999px;
   width: 0;
   height: 0;
   visibility: hidden;
-  display: none;
   opacity: 0.0;
 }
 

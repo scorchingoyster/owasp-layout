@@ -1,5 +1,10 @@
-// font declarations
+/*
+general styling for general items
+use titillium for content display, ubuntu for UI elements
+*/
 
+
+// base font styling
 h1, h2, h3, h4, h5, h6 {
   font-family: 'titillium_bold', sans-serif;
 }
@@ -26,8 +31,7 @@ code {
   font-family: 'ubuntu_medium', sans-serif;
 }
 
-// desktop layout
-
+// basic layout spec
 header, main, footer {
   max-width: $grid-val * 43; // 30 * 43 = 1290px
   width: 100%;
@@ -38,5 +42,31 @@ header, main, footer {
 main {
   img {
     width: 100%;
+  }
+}
+
+.base-grid {
+  display: grid;
+  // default to mobile grid of 1 column
+  grid-template-rows: $grid-val*4 1fr $grid-val*5;
+  grid-template-columns: 1fr;
+  grid-template-areas: "header" "body" "footer";
+}
+
+header {
+  grid-area: header;
+  max-height: $grid-val * 3; // 90px
+}
+
+main {
+  grid-area: body;
+}
+
+footer {
+  grid-area: footer;
+  padding-top: $grid-val/2; // 15px
+  background-color: whitesmoke;
+  .disclaimer {
+    margin: $grid-val/2 0;
   }
 }

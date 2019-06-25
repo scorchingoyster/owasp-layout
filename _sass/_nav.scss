@@ -1,25 +1,20 @@
-.top-nav {
-  button {
-    @include cta-button;
-  }
-}
+/*
+navigation related styling
+header, footer, mobile navigation menu
+*/
 
 // desktop nav
-header {
-  max-height: $grid-val * 3; // 90px
-}
-
 .desktop-logo {
   display: inline-block;
   img {
     width: 100%;
-    max-width: 180px;
+    max-width: $grid-val*5; // 150px
   }
 }
 
 .site-search {
   width: 100%;
-  max-width: $grid-val * 8; // 240px
+  max-width: $grid-val * 7; // 210px
   border: 2px solid #dddddd;
   padding: 6px;
   border-radius: 0;
@@ -48,6 +43,13 @@ header {
   }
 }
 
+.top-nav {
+  margin-bottom: 50px;
+  button {
+    @include cta-button;
+  }
+}
+
 .bot-nav {
   max-height: 50px;
   a:first-child {
@@ -63,7 +65,6 @@ header {
 }
 
 // mobile nav 
-
 .menu-toggler {
   position: fixed;
   margin-left: $grid-val/2;
@@ -71,6 +72,7 @@ header {
   color: #222222;
 }
 
+// mobile menu drawer, displays when toggled on
 .mobile-menu {
   position: fixed;
   left: 0;
@@ -78,6 +80,7 @@ header {
   width: 75%;
   height: 100%;
   margin: 0;
+  z-index: 3;
   overflow: scroll;
   background-color: $bg-blue;
   box-shadow: 2px 0 6px #555555;
@@ -106,6 +109,19 @@ header {
   }
 }
 
+#overlay {
+  position: fixed;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+}
+
 .alt-logo {
   display: block;
   margin: $grid-val/2 auto;
@@ -115,6 +131,7 @@ header {
   }
 }
 
+// replace desktop nav with mobile nav
 @media screen and (max-width: 1019px) {
   .top-nav,
   .bot-nav {
