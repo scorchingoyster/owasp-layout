@@ -67,12 +67,8 @@ header {
 .menu-toggler {
   position: fixed;
   margin-left: $grid-val/2;
-  z-index: 1;
   font-size: $grid-val;
   color: #222222;
-  .fa-times {
-    color: white;
-  }
 }
 
 .mobile-menu {
@@ -80,14 +76,18 @@ header {
   left: 0;
   top: 0;
   width: 75%;
-  height: 100vh;
+  height: 100%;
   margin: 0;
-  padding: 90px 0 0 0;
+  overflow: scroll;
   background-color: $bg-blue;
   box-shadow: 2px 0 6px #555555;
   li {
     padding: 12px 15px;
-    &:not(:first-child) {
+    &:first-child {
+      margin-bottom: $grid-val/2;
+      font-size: $grid-val;
+    }
+    &:not(:nth-child(-n+2)) {
       border-top: 1px solid lighten($bg-blue, 5%);
     }
   }

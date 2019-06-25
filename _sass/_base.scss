@@ -1,4 +1,5 @@
 // font declarations
+
 h1, h2, h3, h4, h5, h6 {
   font-family: 'titillium_bold', sans-serif;
 }
@@ -28,10 +29,10 @@ code {
 // desktop layout
 
 header, main, footer {
-  max-width: $grid-val * 42; // 30 * 42 = 1260px
+  max-width: $grid-val * 43; // 30 * 43 = 1290px
   width: 100%;
   margin: 0 auto;
-  padding: 0 $grid-val/2;
+  padding: 0 $grid-val;
 }
 
 main {

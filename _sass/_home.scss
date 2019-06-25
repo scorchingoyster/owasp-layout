@@ -1,8 +1,10 @@
+// layout for homepage
 .home {
   display: grid;
+  // default to mobile grid of 1 column
   grid-template-rows: 100px 1fr 150px;
   grid-template-columns: 1fr;
-  grid-template-areas: "header" "content" "footer";
+  grid-template-areas: "header" "body" "footer";
 }
 
 header {
@@ -10,17 +12,26 @@ header {
 }
 
 main {
-  grid-area: content;
+  grid-area: body;
 }
 
 footer {
   grid-area: footer;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: $content-bp) {
+  // desktop grid of 2 equal columns for homepage content
   main {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+    & > section {
+      &:nth-child(odd) {
+        margin-right: $grid-val/2;
+      }
+      &:nth-child(even) {
+        margin-left: $grid-val/2;
+      }
+    }
   }
 }

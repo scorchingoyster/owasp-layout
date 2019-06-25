@@ -5,10 +5,4 @@ function toggleMenu() {
   } else {
     x.className = "mobile-menu hide-el";
   }
-  var t = document.getElementById("menu-icon");
-  if (t.classList.contains("fa-bars")) {
-    t.className = "fa fa-times";
-  } else {
-    t.className = "fa fa-bars";
-  }
 }
