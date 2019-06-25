@@ -44,7 +44,7 @@ header, footer, mobile navigation menu
 }
 
 .top-nav {
-  margin-bottom: 50px;
+  margin: $grid-val 0 50px 0;
   button {
     @include cta-button;
   }
@@ -137,7 +137,7 @@ header, footer, mobile navigation menu
   .bot-nav {
     @include hide-el;
   }
-  header {
+  .header-wrapper {
     position: fixed;
     max-height: $grid-val * 2.5; // 75px
     margin-bottom: $grid-val/2;

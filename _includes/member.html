@@ -1,0 +1,12 @@
+<section class="member-list">
+  {% for image in site.static_files %}
+    {% if image.path contains 'image/member-logo' %}
+      <div class="member-logo">
+        <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+      </div>
+    {% endif %}
+  {% endfor %}
+</section>
+<section class="member-spotlight">
+
+</section>

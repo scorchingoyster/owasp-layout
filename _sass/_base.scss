@@ -32,11 +32,17 @@ code {
 }
 
 // basic layout spec
-header, main, footer {
+.header-wrapper, .main-wrapper, .footer-wrapper {
   max-width: $grid-val * 43; // 30 * 43 = 1290px
   width: 100%;
   margin: 0 auto;
   padding: 0 $grid-val;
+}
+
+.footer-wrapper {
+  .disclaimer {
+    margin: $grid-val/2 0;
+  }
 }
 
 main {
@@ -55,7 +61,6 @@ main {
 
 header {
   grid-area: header;
-  max-height: $grid-val * 3; // 90px
 }
 
 main {
@@ -64,9 +69,6 @@ main {
 
 footer {
   grid-area: footer;
-  padding-top: $grid-val/2; // 15px
+  padding: $grid-val 0; // 15px
   background-color: whitesmoke;
-  .disclaimer {
-    margin: $grid-val/2 0;
-  }
 }

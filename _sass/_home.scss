@@ -6,9 +6,9 @@ currently only used for homepage
 // desktop grid of 2 equal columns for homepage content
 @media screen and (min-width: $content-bp) {
   .home {
-    main {
+    .main-wrapper {
       display: grid;
-      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 0.5fr;
       grid-template-columns: 1fr 1fr;
       & > section {
         &:nth-child(odd) {
@@ -19,5 +19,20 @@ currently only used for homepage
         }
       }
     }
+  }
+}
+
+.member-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.member-logo {
+  display: inline-block;
+  max-width: $grid-val*4;
+  max-height: $grid-val*4;
+  padding: $grid-val/2;
+  img {
+    max-width: 100%;
   }
 }
