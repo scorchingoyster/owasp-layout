@@ -56,9 +56,9 @@ $content-bp: $grid-val*28; // 840px
 
 // font imports
 @font-face {
-  font-family: 'roboto_mono';
-  src: url('#{$font-path}/robotomono-regular.woff2') format('woff2'),
-        url('#{$font-path}/robotomono-regular.woff') format('woff');
+  font-family: 'sharetech';
+  src: url('#{$font-path}/sharetech-regular.woff2') format('woff2'),
+        url('#{$font-path}/sharetech-regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }

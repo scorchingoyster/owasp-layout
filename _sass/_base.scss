@@ -23,16 +23,19 @@ nav {
   font-family: 'ubuntu', sans-serif;
 }
 
-code {
-  font-family: 'roboto_mono', monospace;
+code,
+.callout-mono {
+  font-family: 'sharetech', monospace;
 }
 
 .callout-link {
+  display: block;
+  margin: $grid-val 0;
   font-family: 'ubuntu_medium', sans-serif;
 }
 
 // basic layout spec
-.header-wrapper, .main-wrapper, .footer-wrapper {
+.header-wrapper, .main-wrapper, .member-wrapper, .footer-wrapper {
   max-width: $grid-val * 43; // 30 * 43 = 1290px
   width: 100%;
   margin: 0 auto;
@@ -70,5 +73,4 @@ main {
 footer {
   grid-area: footer;
   padding: $grid-val 0; // 15px
-  background-color: whitesmoke;
 }

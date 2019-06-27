@@ -3,14 +3,14 @@ home layout specific styling
 currently only used for homepage
 */
 
-// desktop grid of 2 equal columns for homepage content
+
 @media screen and (min-width: $content-bp) {
   .home {
-    .main-wrapper {
+    .main-wrapper { // desktop grid of 2 equal columns for homepage
       display: grid;
-      grid-template-rows: 1fr 1fr 1fr 0.5fr;
+      grid-template-rows: 1fr 1fr 0.75fr;
       grid-template-columns: 1fr 1fr;
-      & > section {
+      & > section { // inward margin for the member section
         &:nth-child(odd) {
           margin-right: $grid-val/2;
         }
@@ -19,20 +19,43 @@ currently only used for homepage
         }
       }
     }
+    .member-wrapper { // nested grid for member section
+      display: grid;
+      grid-template-rows: 1fr auto;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 }
 
+.member {
+  background-color: whitesmoke;
+}
+
 .member-list {
-  display: flex;
-  flex-wrap: wrap;
+  div {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .member-logo {
-  display: inline-block;
-  max-width: $grid-val*4;
-  max-height: $grid-val*4;
-  padding: $grid-val/2;
+  display: flex;
+  align-items: center;
+  max-width: $grid-val*3;
+  height: $grid-val*3;
+  margin: $grid-val/3 $grid-val/1.5;
   img {
     max-width: 100%;
+  }
+}
+
+.member-cta {
+  grid-column: 1/3;
+  text-align: center;
+  button {
+    @include cta-button;
+  }
+  a {
+    display: block;
   }
 }

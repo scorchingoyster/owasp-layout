@@ -49,5 +49,3 @@ permalink: /
     <li>Event 3</li>
   </ul>
 </section>
-
-{% include member.html %}
