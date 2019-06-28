@@ -44,7 +44,7 @@ header, footer, mobile navigation menu
 }
 
 .top-nav {
-  margin: $grid-val 0 50px 0;
+  margin: $grid-val 0;
   button {
     @include cta-button;
   }

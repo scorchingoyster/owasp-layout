@@ -6,11 +6,11 @@ currently only used for homepage
 
 @media screen and (min-width: $content-bp) {
   .home {
-    .main-wrapper { // desktop grid of 2 equal columns for homepage
+    .main-wrapper { // grid for main content area
       display: grid;
-      grid-template-rows: 1fr 1fr 0.75fr;
-      grid-template-columns: 1fr 1fr;
-      & > section { // inward margin for the member section
+      margin: $grid-val auto;
+      grid-template-columns: repeat(2, auto);
+      & > section { // inward margin 
         &:nth-child(odd) {
           margin-right: $grid-val/2;
         }
@@ -19,10 +19,18 @@ currently only used for homepage
         }
       }
     }
-    .member-wrapper { // nested grid for member section
+    .member-wrapper { // grid for member section
       display: grid;
-      grid-template-rows: 1fr auto;
+      // grid-template-rows: 1fr auto;
       grid-template-columns: 1fr 1fr;
+      & > section { // inward margin 
+        &:nth-child(odd) {
+          margin-right: $grid-val/2;
+        }
+        &:nth-child(even) {
+          margin-left: $grid-val/2;
+        }
+      }
     }
   }
 }
@@ -46,6 +54,13 @@ currently only used for homepage
   margin: $grid-val/3 $grid-val/1.5;
   img {
     max-width: 100%;
+  }
+}
+
+.member-spotlight {
+  img {
+    max-width: 200px;
+    margin: $grid-val auto;
   }
 }
 
