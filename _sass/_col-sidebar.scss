@@ -1,36 +1,18 @@
 /*
-sidebar layout specific styling
+7:3 two column layout specific styling
 */
 
-@media screen and (min-width: $content-bp) {
-  .col-sidebar {
-    .main-wrapper { // grid for main content area
-      display: grid;
-      margin: $grid-val auto;
-      grid-template-rows: repeat(3, auto);
-      grid-template-columns: 7fr 3fr;
-      grid-template-areas: 
-              "menu github"
-              "intro side"
-              "body side";
-    }
+.col-sidebar { // default layout on desktop
+  .main-wrapper { // grid for main content area
+    display: grid;
+    margin: $grid-val auto;
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: 7fr 3fr;
+    grid-template-areas: 
+            "menu  github"
+            "intro side"
+            "body  side";
   }
-}
-
-@media screen and (max-width: $content-bp) {
-    .col-sidebar {
-      .main-wrapper {
-        display: grid;
-        grid-template-rows: auto;
-        grid-template-columns: 1fr;
-        grid-template-areas:
-                "intro"
-                "github"
-                "menu"
-                "body"
-                "side";
-      }
-    }
 }
 
 .sub-nav {
@@ -43,6 +25,7 @@ sidebar layout specific styling
     margin: 0;
     & > li {
       display: inline-block;
+      margin-bottom: $grid-val/3;
     }
     & a {
       @include nav-link;
@@ -63,14 +46,26 @@ sidebar layout specific styling
 
 .github-buttons {
   grid-area: github;
+  display: flex;
+  justify-content: center;
+  & > * {
+
+  }
 }
 
 .sidebar {
   grid-area: side;
+  padding: 0 $grid-val/2;
   background-color: grey;
+  & > * {
+    margin: $grid-val/2 0;
+  }
+  & > * + * { // targets anything that has a neighbor element
+    margin: $grid-val 0;
+  }
 }
 
-.video-container {
+.video-container { // TBD, placeholder for testing Youtube embeds
   position: relative;
   max-width: 100%;
   padding-bottom: 56.25%;
@@ -82,5 +77,26 @@ sidebar layout specific styling
     height: 100%;
     z-index: -1;
 
+  }
+}
+
+@media screen and (max-width: $content-bp) { // 1-column on mobile
+  .col-sidebar { 
+    .main-wrapper {
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+              "intro"
+              "github"
+              "menu"
+              "body"
+              "side";
+    }
+    .sub-nav {
+      ul {
+        margin: $grid-val 0;
+      }
+    }
   }
 }
