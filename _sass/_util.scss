@@ -16,6 +16,7 @@ $font-size: 18px;
 $grid-val: 30px;
 
 $content-bp: $grid-val*28; // 840px
+$header-bp: $grid-val*34; // 1020px
 
 // mixins
 @mixin hide-el {

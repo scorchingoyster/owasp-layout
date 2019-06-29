@@ -2,11 +2,14 @@
 <head>
   {% include head.html %}
 </head>
-<body class="two-col">
+<body class="base-grid col-sidebar">
   {% include header.html %}
 
   <main>
-    {{ content }}
+    <div class="main-wrapper">
+        {{ content }}
+        {% include sidebar.html %}
+    </div>
   </main>
 
   {% include footer.html %}

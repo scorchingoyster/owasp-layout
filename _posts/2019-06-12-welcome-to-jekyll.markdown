@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: col-sidebar
 title:  "Welcome to Jekyll!"
 date:   2019-06-12 19:50:36 -0400
 categories: jekyll update

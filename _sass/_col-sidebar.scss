@@ -1,0 +1,60 @@
+/*
+sidebar layout specific styling
+*/
+
+@media screen and (min-width: $content-bp) {
+  .col-sidebar {
+    .main-wrapper { // grid for main content area
+      display: grid;
+      margin: $grid-val auto;
+      grid-template-rows: repeat(3, auto);
+      grid-template-columns: 7fr 3fr;
+      grid-template-areas: 
+              "menu github"
+              "intro side"
+              "body side";
+      // & > * { // inward margin 
+      //   &:nth-child(odd) {
+      //     margin-right: $grid-val/2;
+      //   }
+      //   &:nth-child(even) {
+      //     margin-left: $grid-val/2;
+      //   }
+      // }
+    }
+  }
+}
+
+.sub-nav {
+  grid-area: menu;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  ul {
+    margin: 0;
+    & > li {
+      display: inline-block;
+    }
+    & a {
+      @include nav-link;
+    }
+  }
+}
+
+.page-intro {
+  grid-area: intro;
+}
+
+.page-body {
+  grid-area: body;
+}
+
+.github-buttons {
+  grid-area: github;
+}
+
+.sidebar {
+  grid-area: side;
+  background-color: grey;
+}

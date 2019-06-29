@@ -54,10 +54,9 @@ main {
   }
 }
 
-.base-grid {
+.base-grid { // default to mobile grid of 1 column
   display: grid;
-  // default to mobile grid of 1 column
-  grid-template-rows: $grid-val*4 1fr $grid-val*5;
+  grid-template-rows: repeat(3, auto);
   grid-template-columns: 1fr;
   grid-template-areas: "header" "body" "footer";
 }
@@ -73,4 +72,10 @@ main {
 footer {
   grid-area: footer;
   padding: $grid-val 0; // 15px
+}
+
+@media screen and (max-width: $header-bp) {
+  .base-grid {
+    grid-template-rows: $grid-val*3 auto auto;
+  }
 }
