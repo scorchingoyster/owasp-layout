@@ -35,7 +35,10 @@ code,
 }
 
 // basic layout spec
-.header-wrapper, .main-wrapper, .member-wrapper, .footer-wrapper {
+.header-wrapper,
+.main-wrapper,
+.member-wrapper,
+.footer-wrapper {
   max-width: $grid-val * 43; // 30 * 43 = 1290px
   width: 100%;
   margin: 0 auto;
@@ -78,6 +81,7 @@ footer {
 }
 
 @media screen and (max-width: $content-bp) {
+  .header-wrapper,
   .main-wrapper,
   .member-wrapper,
   .footer-wrapper {

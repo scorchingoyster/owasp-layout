@@ -67,7 +67,7 @@ header, footer, mobile navigation menu
 }
 
 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: $header-bp) {
   .alt-nav {
     @include hide-el;
   }
@@ -76,7 +76,6 @@ header, footer, mobile navigation menu
 // mobile nav 
 .menu-toggler {
   position: fixed;
-  margin-left: $grid-val/2;
   font-size: $grid-val;
   color: #222222;
 }
@@ -141,7 +140,7 @@ header, footer, mobile navigation menu
 }
 
 // replace desktop nav with mobile nav
-@media screen and (max-width: 1019px) {
+@media screen and (max-width: $header-bp - 1) { // 1019px
   .top-nav,
   .bot-nav {
     @include hide-el;
@@ -150,7 +149,6 @@ header, footer, mobile navigation menu
     position: fixed;
     max-height: $grid-val * 2.5; // 75px
     margin-bottom: $grid-val/2;
-    padding: 0;
     background-color: whitesmoke;
     box-shadow: 0 1px 2px #cccccc;
   }
