@@ -40,11 +40,8 @@ code,
   width: 100%;
   margin: 0 auto;
   padding: 0 $grid-val;
-}
-
-.footer-wrapper {
-  .disclaimer {
-    margin: $grid-val/2 0;
+  & > * {
+    margin: 0 $grid-val/2;
   }
 }
 
@@ -77,5 +74,15 @@ footer {
 @media screen and (max-width: $header-bp) {
   .base-grid {
     grid-template-rows: $grid-val*3 auto auto;
+  }
+}
+
+@media screen and (max-width: $content-bp) {
+  .main-wrapper,
+  .member-wrapper,
+  .footer-wrapper {
+    & > * {
+      margin: 0 0;
+    }
   }
 }

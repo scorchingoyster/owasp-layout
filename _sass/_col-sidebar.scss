@@ -13,16 +13,24 @@ sidebar layout specific styling
               "menu github"
               "intro side"
               "body side";
-      // & > * { // inward margin 
-      //   &:nth-child(odd) {
-      //     margin-right: $grid-val/2;
-      //   }
-      //   &:nth-child(even) {
-      //     margin-left: $grid-val/2;
-      //   }
-      // }
     }
   }
+}
+
+@media screen and (max-width: $content-bp) {
+    .col-sidebar {
+      .main-wrapper {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+                "intro"
+                "github"
+                "menu"
+                "body"
+                "side";
+      }
+    }
 }
 
 .sub-nav {
@@ -38,6 +46,9 @@ sidebar layout specific styling
     }
     & a {
       @include nav-link;
+    }
+    & a:first-child {
+      margin-left: 0;
     }
   }
 }
@@ -57,4 +68,19 @@ sidebar layout specific styling
 .sidebar {
   grid-area: side;
   background-color: grey;
+}
+
+.video-container {
+  position: relative;
+  max-width: 100%;
+  padding-bottom: 56.25%;
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+  }
 }
