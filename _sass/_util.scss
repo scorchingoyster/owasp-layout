@@ -34,7 +34,7 @@ $header-bp: $grid-val*34; // 1020px, header changes
 }
 
 @mixin nav-link {
-  margin: 0 9px;
+  margin: 0 10px;
   text-decoration: none;
   color: lighten(black, 45%);
   &:hover {
@@ -53,6 +53,10 @@ $header-bp: $grid-val*34; // 1020px, header changes
     }
     & a {
       @include nav-link;
+      &.current {
+        text-decoration: underline;
+        color: $bg-blue;
+      }
     }
   }
 }
