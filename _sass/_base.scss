@@ -56,9 +56,25 @@ main {
 
 .base-grid { // default to mobile grid of 1 column
   display: grid;
-  grid-template-rows: repeat(3, auto);
   grid-template-columns: 1fr;
-  grid-template-areas: "header" "body" "footer";
+  grid-template-areas: 
+              "header"
+              "noscript"
+              "body"
+              "footer";
+}
+
+noscript {
+  grid-area: noscript;
+  display: block;
+  width: 100%;
+  padding: 15px;
+  color: white;
+  text-align: center;
+  background-color: lighten(red, 15%);
+  a {
+    color: white;
+  }
 }
 
 header {
