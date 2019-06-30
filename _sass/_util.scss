@@ -45,6 +45,18 @@ $header-bp: $grid-val*34; // 1020px, header changes
   }
 }
 
+@mixin nav-menu {
+  ul {
+    margin: 0;
+    & > li {
+      display: inline-block;
+    }
+    & a {
+      @include nav-link;
+    }
+  }
+}
+
 @mixin cta-button {
   padding: 9px 15px;
   border-width: 0;

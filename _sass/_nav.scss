@@ -36,15 +36,7 @@ header, footer, mobile navigation menu
   display: flex;
   justify-content: space-between;
   align-items: center;
-  ul {
-    margin: 0;
-    & > li {
-      display: inline-block;
-    }
-    & a {
-      @include nav-link;
-    }
-  }
+  @include nav-menu;
 }
 
 .top-nav {
