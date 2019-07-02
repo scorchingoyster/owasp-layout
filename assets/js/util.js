@@ -1,56 +1,54 @@
+// element hiding CSS utility class
+var el = "hide-el";
+
+// close announcement banner
+function closeBanner() {
+  var b = document.getElementById("banner");
+  var ha = document.getElementById("has-announcement");
+  b.classList.add(el);
+}
+
+// toggle mobile menu through toggling the class above
+function toggleMenu() {
+  var x = document.getElementById("menu-toggle");
+  var y = document.getElementById("overlay");
+  if (x.classList.contains(el)) {
+    x.classList.remove(el);
+    y.classList.remove(el);
+  } else {
+    x.classList.add(el);
+    y.classList.add(el);
+  }
+}
+
+// tab switcher
+function switchTab(event, tabName) {
+  event.preventDefault();
+
+  var i, tab, tab_link;
+
+  // hide all tab content by default
+  tab = document.getElementsByClassName("tab");
+  for (i = 0; i < tab.length; i++) {
+    tab[i].classList.add(el);
+  }
+
+  tab_link = document.getElementsByClassName("tab_link");
+  for (i = 0; i < tab_link.length; i++) {
+    tab_link[i].classList.remove("current");
+  }
+
+  document.getElementById(tabName).classList.remove(el);
+  event.currentTarget.classList.add("current");
+
+}
+
+
+// once document is ready
 domReady(function(event) {
 
-  // element hiding CSS utility class
-  var el = "hide-el";
-
-  // fix to dynamically specify announcement banner height
-  function sizeBanner() {
-    var h = document.getElementById("has-announcement");
-    var b = document.getElementById("banner").offsetHeight;
-    h.style.top = b + "px";
-  }
-  window.onload = sizeBanner;
-  window.onresize = sizeBanner;
-
-  // toggle mobile menu through toggling the class above
-  function toggleMenu() {
-    var x = document.getElementById("menu-toggle");
-    var y = document.getElementById("overlay");
-    if (x.classList.contains(el)) {
-      x.classList.remove(el);
-      y.classList.remove(el);
-    } else {
-      x.classList.add(el);
-      y.classList.add(el);
-    }
-  }
-
-  // tab switcher
-  function switchTab(event, tabName) {
-    event.preventDefault();
-
-    var i, tab, tab_link;
-
-    // hide all tab content by default
-    tab = document.getElementsByClassName("tab");
-    for (i = 0; i < tab.length; i++) {
-      tab[i].classList.add(el);
-    }
-
-    tab_link = document.getElementsByClassName("tab_link");
-    for (i = 0; i < tab_link.length; i++) {
-      tab_link[i].classList.remove("current");
-    }
-
-    document.getElementById(tabName).classList.remove(el);
-    event.currentTarget.classList.add("current");
-
-  }
-
-  // simulate click behavior to show first tab by default
-  document.addEventListener("DOMContentLoaded", function(){
-    document.getElementById("tab_default").click();
-  });
+  // simulate click behavior to show first subtab by default
+  document.getElementById("tab_default").click();
 
   // browser version checker and notifier
   // source: https://browser-update.org
@@ -64,4 +62,5 @@ domReady(function(event) {
   catch(e){window.attachEvent("onload", $buo_f)}
 
 });
+
 

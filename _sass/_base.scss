@@ -3,7 +3,6 @@ general styling for general items
 use titillium for content display, ubuntu for UI elements
 */
 
-
 // base font styling
 h1, h2, h3, h4, h5, h6 {
   font-family: 'titillium_bold', sans-serif;
@@ -92,7 +91,7 @@ footer {
 
 @media screen and (max-width: $header-bp) {
   .base-grid {
-    grid-template-rows: $grid-val*3 auto auto;
+
   }
 }
 
