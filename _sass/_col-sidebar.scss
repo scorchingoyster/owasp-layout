@@ -22,14 +22,7 @@
   justify-content: space-between;
   align-items: center;
   @include nav-menu;
-  ul {
-    & > li {
-      margin-bottom: $grid-val/3;
-    }
-    & a:first-child {
-      margin-left: 0;
-    }
-  }
+
 }
 
 .page-intro {
