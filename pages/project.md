@@ -23,13 +23,13 @@ permalink: /project
   <p>Interested in a ZAP talk or training event? See the talks tab. Not one near you? Contact a Zap Evangelist to arrange one! </p>
 </section>
 
-<section id="screenshots" class="page-body tab">
+<section id="screenshots" class="page-body tab remove-el">
   <div>
     Testing another tab. This one is supposed to be for screenshots.
   </div>
 </section>
 
-<section id="features" class="page-body tab">
+<section id="features" class="page-body tab remove-el">
   <div>
     Testing another tab. This one is supposed to be for feature. Some more text.
   </div>

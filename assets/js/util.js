@@ -1,54 +1,38 @@
-// element hiding CSS utility class
-var el = "hide-el";
+$(document).ready(function() {
 
-// close announcement banner
-function closeBanner() {
-  var b = document.getElementById("banner");
-  var ha = document.getElementById("has-announcement");
-  b.classList.add(el);
-}
+  // element hiding CSS utility classes
+  // use hideEl for hiding elements from only the SIGHTED USERS
+  // use removeEl for hiding elements from EVERYONE
+  var hideEl = "hide-el";
+  var removeEl = "remove-el";
 
-// toggle mobile menu through toggling the class above
-function toggleMenu() {
-  var x = document.getElementById("menu-toggle");
-  var y = document.getElementById("overlay");
-  if (x.classList.contains(el)) {
-    x.classList.remove(el);
-    y.classList.remove(el);
-  } else {
-    x.classList.add(el);
-    y.classList.add(el);
-  }
-}
+  // close announcement banner
+  $("#close-banner").click(function() {
+    $(this).closest("#banner").remove();
+  });
 
-// tab switcher
-function switchTab(event, tabName) {
-  event.preventDefault();
+  // toggle mobile menu display
+  $(".menu-toggler").click(function() {
+    $(".mobile-menu").toggleClass(hideEl);
+    $("#overlay").toggleClass(removeEl);
+  });
 
-  var i, tab, tab_link;
+  // load and select sub-menu navigation
+  // $(".sub-nav").siblings(".tab:not(#main)").addClass(removeEl);
+  $(".sub-nav li:first-child>a").addClass("current");
 
-  // hide all tab content by default
-  tab = document.getElementsByClassName("tab");
-  for (i = 0; i < tab.length; i++) {
-    tab[i].classList.add(el);
-  }
+  $(".tab-link").click(function(e) {
+    e.preventDefault();
+    $(".tab-link").removeClass("current");
+    $("#"+this.id).addClass("current");
+    $(".sub-nav").siblings(".tab").addClass(removeEl);
+    $("section#" + (this.id.replace("-link",""))).toggleClass(removeEl);
+  });
 
-  tab_link = document.getElementsByClassName("tab_link");
-  for (i = 0; i < tab_link.length; i++) {
-    tab_link[i].classList.remove("current");
-  }
-
-  document.getElementById(tabName).classList.remove(el);
-  event.currentTarget.classList.add("current");
-
-}
-
-
-// once document is ready
-domReady(function(event) {
-
-  // simulate click behavior to show first subtab by default
-  document.getElementById("tab_default").click();
+  // show dropdown
+  $(".top-nav > ul a").hover(function() {
+    $(this).siblings(".dropdown-menu").toggleClass(hideEl);
+  });
 
   // browser version checker and notifier
   // source: https://browser-update.org
@@ -62,5 +46,3 @@ domReady(function(event) {
   catch(e){window.attachEvent("onload", $buo_f)}
 
 });
-
-

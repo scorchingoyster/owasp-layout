@@ -86,7 +86,9 @@ main {
 
 footer {
   grid-area: footer;
+  margin-top: 30px;
   padding: $grid-val 0; // 15px
+  border-top: 1px solid whitesmoke;
 }
 
 @media screen and (max-width: $header-bp) {

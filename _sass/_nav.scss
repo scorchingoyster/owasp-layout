@@ -45,6 +45,14 @@ header, footer, mobile navigation menu
   }
 }
 
+.dropdown-menu {
+  position: absolute;
+  padding: 0;
+  li {
+    background-color: goldenrod;
+  }
+}
+
 .bot-nav {
   max-height: 50px;
   a:first-child {
@@ -61,7 +69,7 @@ header, footer, mobile navigation menu
 
 @media screen and (min-width: $header-bp) {
   .alt-nav {
-    @include hide-el;
+    @include remove-el;
   }
 }
 
@@ -149,7 +157,7 @@ header, footer, mobile navigation menu
     padding: 0;
     color: white;
   }
-  a[onclick] {
+  a#close-banner {
     position: absolute;
     right: 15px;
     top: 10px;
@@ -170,10 +178,19 @@ header, footer, mobile navigation menu
   }
 }
 
+// hide first 4 footer links on desktop 
+@media screen and (min-width: $header-bp) { // 1020px
+  .bot-nav {
+    ul > li:nth-child(-n+4) {
+      @include remove-el;
+    }
+  }
+}
+
 // replace desktop nav with mobile nav
 @media screen and (max-width: $header-bp - 1) { // 1019px
   .top-nav {
-    @include hide-el;
+    @include remove-el;
   }
   .header-wrapper {
     max-height: $grid-val * 2.5; // 75px
@@ -181,5 +198,4 @@ header, footer, mobile navigation menu
     background-color: whitesmoke;
     box-shadow: 0 1px 2px #cccccc;
   }
-
 }
