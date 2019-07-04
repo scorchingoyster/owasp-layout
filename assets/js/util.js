@@ -18,7 +18,6 @@ $(document).ready(function() {
   });
 
   // load and select sub-menu navigation
-  // $(".sub-nav").siblings(".tab:not(#main)").addClass(removeEl);
   $(".sub-nav li:first-child>a").addClass("current");
 
   $(".tab-link").click(function(e) {

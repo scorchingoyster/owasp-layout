@@ -6,7 +6,7 @@
         {% for image in site.static_files %}
           {% if image.path contains 'image/member-logo' %}
             <a href="#" class="member-logo">
-              <img src="{{ site.baseurl }}{{ image.path }}" alt="image" />
+              <img src="{{ site.github.url }}{{ image.path }}" alt="image" />
             </a>
           {% endif %}
         {% endfor %}
