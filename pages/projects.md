@@ -2,7 +2,7 @@
 
 layout: col-sidebar
 title: Project Example Title
-permalink: /project
+permalink: /projects
 
 ---
 

@@ -7,7 +7,7 @@
       <a href="#" class="menu-toggler">
         <i class="fa fa-bars" id="menu-icon"></i>
       </a>
-      <a href="/" class="alt-logo">
+      <a href="{{ site.github.url }}" class="alt-logo">
           <img src="{{ site.github.url }}/assets/image/logo.png" alt="">
       </a>
       <div id="overlay" class="hide-el"></div>
@@ -21,7 +21,7 @@
         <li>
           <input type="text" class="site-search" placeholder="Search OWASP.org">
         </li>
-        <li><a href="#">PROJECTS</a></li>
+        <li><a href="{{ site.github.url }}/projects">PROJECTS</a></li>
         <li><a href="#">CHAPTERS</a></li>
         <li><a href="#">EVENTS</a></li>
         <li><a href="#">ABOUT</a></li>
@@ -38,12 +38,12 @@
     </nav>
     
     <nav class="top-nav">
-      <a href="/" class="desktop-logo">
+      <a href="{{ site.github.url }}" class="desktop-logo">
         <img src="{{ site.github.url }}/assets/image/logo.png" alt="">
       </a>
       <ul>
         <li>
-          <a href="#" id="projects">PROJECTS</a>
+          <a href="{{ site.github.url }}/projects" id="projects">PROJECTS</a>
           {% include dropdown-menu.html %}
         </li>
         <li>
