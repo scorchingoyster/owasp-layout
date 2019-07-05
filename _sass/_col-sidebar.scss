@@ -69,6 +69,12 @@
   }
 }
 
+.sub-nav {
+  li {
+    margin-bottom: $grid-val/3;
+  }
+}
+
 @media screen and (max-width: $content-bp) { // 1-column on mobile
   .col-sidebar { 
     .main-wrapper {

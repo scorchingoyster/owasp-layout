@@ -63,8 +63,6 @@ $header-bp: $grid-val*34; // 1020px, header changes
     margin: 0;
     & > li {
       display: inline-block;
-      margin-bottom: $grid-val/3;
-
     }
     & a {
       @include nav-link;

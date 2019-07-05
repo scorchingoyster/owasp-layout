@@ -29,9 +29,11 @@ $(document).ready(function() {
   });
 
   // show dropdown
-  $(".top-nav > ul a").hover(function() {
-    $(this).siblings(".dropdown-menu").toggleClass(hideEl);
+  $(".top-nav > ul li").hover(function() {
+    $(this).children().siblings(".dropdown-menu").toggleClass(hideEl);
   });
+
+
 
   // browser version checker and notifier
   // source: https://browser-update.org
