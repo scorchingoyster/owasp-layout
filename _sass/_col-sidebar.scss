@@ -87,7 +87,7 @@
   }
 }
 
-@media screen and (max-width: $content-bp) { // 1-column on mobile
+@media screen and (max-width: $content-bp - 1) { // 1-column on mobile
   .col-sidebar { 
     .main-wrapper {
       display: grid;

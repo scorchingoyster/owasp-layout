@@ -40,7 +40,7 @@ header, footer, mobile navigation menu
 }
 
 .top-nav {
-  .nav-button {
+  .nav-button > a {
     @include cta-button;
   }
 }
@@ -79,7 +79,9 @@ header, footer, mobile navigation menu
 }
 
 .bot-nav {
-  max-height: 50px;
+  li {
+    margin-bottom: $grid-val/3;
+  }
   a:first-child {
     margin-left: 0;
   }
@@ -141,8 +143,11 @@ header, footer, mobile navigation menu
     text-decoration: none;
   }
   .nav-button {
-    @include cta-button;
     margin-top: $grid-val/3;
+    & > a {
+      @include cta-button;
+      margin-right: $grid-val/3;
+    }
   }
 }
 
@@ -201,17 +206,8 @@ header, footer, mobile navigation menu
   }
 }
 
-// hide first 4 footer links on desktop 
-@media screen and (min-width: $header-bp) { // 1020px
-  .bot-nav {
-    ul > li:nth-child(-n+4) {
-      @include remove-el;
-    }
-  }
-}
-
-// replace desktop nav with mobile nav
 @media screen and (max-width: $header-bp - 1) { // 1019px
+  // replace desktop nav with mobile nav
   .top-nav {
     @include remove-el;
   }
@@ -220,5 +216,26 @@ header, footer, mobile navigation menu
     margin-bottom: $grid-val/2;
     background-color: whitesmoke;
     box-shadow: 0 1px 2px #cccccc;
+  }
+}
+
+@media screen and (min-width: $content-bp) { // 840px
+  .bot-nav {
+    // hide first 5 footer links on desktop 
+    ul > li:nth-child(-n+5) {
+      @include remove-el;
+    }
+  }
+}
+
+@media screen and (max-width: $content-bp - 1) {
+  // restyling for ease of use on mobile
+  .bot-nav {
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 auto;
+    }
   }
 }
