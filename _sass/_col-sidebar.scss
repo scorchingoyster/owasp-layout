@@ -45,12 +45,24 @@
 .sidebar {
   grid-area: side;
   padding: 0 $grid-val/2;
-  background-color: grey;
+  background-color: whitesmoke;
   & > * {
     margin: $grid-val/2 0;
   }
-  & > * + * { // targets anything that has a neighbor element
+  & > * + * { // targets any direct descendant that has a neighbor element
     margin: $grid-val 0;
+  }
+  ul {
+    @include no-bullet-list;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
