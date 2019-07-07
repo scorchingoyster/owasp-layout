@@ -52,8 +52,7 @@ currently only used for homepage
 
 .member-cta {
   grid-column: 1/3;
-  text-align: center;
-  a {
-    display: block;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

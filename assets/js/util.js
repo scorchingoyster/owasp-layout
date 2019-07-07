@@ -1,5 +1,11 @@
 $(document).ready(function() {
 
+  // introduce an element that blocks for 0.01s when page loads
+  // fix for a bug when user's mouse triggers JS events too early
+  setTimeout(function(){
+       $('#blocker').remove();
+  }, 10);
+
   // element hiding CSS utility classes
   // use hideEl for hiding elements from only the SIGHTED USERS
   // use removeEl for hiding elements from EVERYONE
@@ -30,9 +36,8 @@ $(document).ready(function() {
 
   // show dropdown
   $(".top-nav > ul li").hover(function() {
-    $(this).children().siblings(".dropdown-menu").toggleClass(hideEl);
+    $(this).children(".dropdown-menu").toggleClass(hideEl);
   });
-
 
 
   // browser version checker and notifier
