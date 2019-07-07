@@ -16,9 +16,9 @@ header, footer, mobile navigation menu
   }
 }
 
-.site-search {
+.search-bar {
   width: 100%;
-  max-width: $grid-val * 7; // 210px
+  max-width: $grid-val * 6; // 180px
   border: 2px solid #dddddd;
   padding: 6px;
   border-radius: 0;
@@ -27,6 +27,22 @@ header, footer, mobile navigation menu
   }
   &::placeholder {
     color: grey;
+  }
+}
+
+.site-search {
+  display: flex;
+  align-items: center;
+  & > span {
+    margin-right: $grid-val/3;
+    cursor: pointer;
+    color: $cta-blue;
+    &:hover {
+      color: lighten($cta-blue, 10%);
+    }
+  }
+  & > .search-bar {
+    display: none;
   }
 }
 
@@ -42,6 +58,9 @@ header, footer, mobile navigation menu
 .top-nav {
   .nav-button > a {
     @include cta-button;
+  }
+  .nav-button > * + * {
+    margin-left: $grid-val/3;
   }
 }
 

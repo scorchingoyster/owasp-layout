@@ -17,6 +17,12 @@ $(document).ready(function() {
     $(this).closest("#banner").remove();
   });
 
+  $("#search-icon").click(function() {
+    $(".search-bar").animate({
+      width: 'show'
+    }, 300);
+  });
+
   // toggle mobile menu display
   $(".menu-toggler").click(function() {
     $(".mobile-menu").toggleClass(hideEl);

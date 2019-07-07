@@ -18,7 +18,7 @@
           </a>
         </li>
         <li>
-          <input type="text" class="site-search" placeholder="Search OWASP.org">
+          <input type="text" class="search-bar" placeholder="Search OWASP.org">
         </li>
         <li><a href="{{ site.github.url }}/projects">PROJECTS</a></li>
         <li><a href="#">CHAPTERS</a></li>
@@ -58,7 +58,10 @@
           {% include dropdown-menu.html %}
         </li>
       </ul>
-      <input class="site-search" type="text" placeholder="Search OWASP.org">
+      <div class="site-search">
+        <span id="search-icon"><i class="fa fa-search"></i></span>
+        <input class="search-bar" type="text" placeholder="Search OWASP.org">
+      </div>
       <div class="nav-button">
         <a href="#">Donate</a>
         <a href="#">Join</a>
