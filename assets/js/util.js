@@ -17,10 +17,12 @@ $(document).ready(function() {
     $(this).closest("#banner").remove();
   });
 
+  // show and focus on search bar
   $("#search-icon").click(function() {
     $(".search-bar").animate({
       width: 'show'
     }, 300);
+    $(".search-bar").focus();
   });
 
   // toggle mobile menu display
