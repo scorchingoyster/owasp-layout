@@ -30,7 +30,7 @@ code,
 
 .callout-link {
   display: block;
-  padding: $grid-val 0;
+  margin: $grid-val 0;
   font-family: 'ubuntu_medium', sans-serif;
 }
 
@@ -111,7 +111,9 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: $grid-val;  
 }
+
 
 @media screen and (min-width: $content-bp) {
   .member-wrapper { // grid for member section
