@@ -14,7 +14,7 @@ permalink: /projects
      organization in the United States on April 21, 2004, to ensure the ongoing availability and support for our work at OWASP. OWASP is an international organization and the OWASP Foundation supports OWASP efforts around the world. OWASP is an open community dedicated to enabling organizations to conceive, develop, acquire, operate, and maintain applications that can be trusted. All of the OWASP tools, documents, forums, and chapters are free and open to anyone interested in improving application security. We advocate approaching application security as a people, process, and technology problem because the most effective approaches to application security include improvements in all of these areas. We can be found at www.owasp.org. </p>
 </section>
 
-<section id="main" class="page-body tab" role="tabpanel" aria-selected="true">
+<section id="main" class="page-body tab" role="tabpanel" aria-labelledby="main-link" tabindex="0">
   <div class="video-container">
     <iframe src="//www.youtube.com/embed/ztfgip-UhWw?" allowfullscreen="true" width="640" height="360" frameborder="0"></iframe>
   </div>
@@ -23,13 +23,13 @@ permalink: /projects
   <p>Interested in a ZAP talk or training event? See the talks tab. Not one near you? Contact a Zap Evangelist to arrange one! </p>
 </section>
 
-<section id="screenshots" class="page-body tab remove-el" role="tabpanel" aria-selected="false">
+<section id="screenshots" class="page-body tab remove-el" role="tabpanel" aria-labelledby="screenshots-link" tabindex="0">
   <div>
     Testing another tab. This one is supposed to be for screenshots.
   </div>
 </section>
 
-<section id="features" class="page-body tab remove-el" role="tabpanel" aria-selected="false">
+<section id="features" class="page-body tab remove-el" role="tabpanel" aria-labelledby="features-link" tabindex="0">
   <div>
     Testing another tab. This one is supposed to be for feature. Some more text.
   </div>
