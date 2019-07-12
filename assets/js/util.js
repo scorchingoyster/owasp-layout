@@ -6,6 +6,7 @@ $(document).ready(function() {
        $('#blocker').remove();
   }, 10);
 
+
   // element hiding CSS utility classes
   // use hideEl for hiding elements from only the SIGHTED USERS
   // use removeEl for hiding elements from EVERYONE
@@ -46,6 +47,7 @@ $(document).ready(function() {
   $(".top-nav > ul li").hover(function() {
     $(this).children(".dropdown-menu").toggleClass(hideEl);
   });
+
 
 });
 
