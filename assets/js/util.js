@@ -22,8 +22,14 @@ $(document).ready(function() {
   $("#search-icon").click(function() {
     $(".search-bar").animate({
       width: 'show'
-    }, 300);
+    }, 200);
     $(".search-bar").focus();
+  });
+
+  $(".search-bar").focusout(function() {
+    $(".search-bar").animate({
+      width: 'hide'
+    }, 200);
   });
 
   // toggle mobile menu display
