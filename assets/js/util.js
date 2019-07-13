@@ -35,12 +35,15 @@ $(document).ready(function() {
   // load and select sub-menu navigation
   $(".sub-nav li:first-child>a").addClass("current");
 
+
   $(".tab-link").click(function(e) {
     e.preventDefault();
     $(".tab-link").removeClass("current");
     $("#"+this.id).addClass("current");
     $(".sub-nav").siblings(".tab").addClass(removeEl);
-    $("section#" + (this.id.replace("-link",""))).toggleClass(removeEl);
+    $("#" + (this.id.replace("-link",""))).toggleClass(removeEl);
+    // window.location.hash = $(this).attr("id").replace("-link","");
+    // $(window).scrollTop(0);
   });
 
   // show dropdown

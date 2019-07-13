@@ -34,18 +34,4 @@ permalink: /
   <p>New blog post example content. Talk about using GitHub for the new website. More text to follow in a second here. Describe the functionality and the awesome CSS.</p>
 </section>
 
-<section class="homepage-news">
-  <h2>Recent News & Opinions</h2>
-  <ul>
-    <li>News 1</li>
-    <li>News 2</li>
-    <li>News 3</li>
-    <li>News 4</li>
-  </ul>
-  <h2>Upcoming events</h2>
-  <ul>
-    <li>Even 1 name</li>
-    <li>Event 2</li>
-    <li>Event 3</li>
-  </ul>
-</section>
+{% include news-events.html %}
