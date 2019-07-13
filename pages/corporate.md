@@ -15,4 +15,5 @@ permalink: /corporate
 
   <h2>OWASP Foundation Bylaws</h2>
   <p>The business of the OWASP Foundation Inc. is outlined in the organizational by-laws. These by-laws govern the organization worldwide and allow the participants to understand the established process for doing so.</p>
+  
 </section>
