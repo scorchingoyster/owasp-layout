@@ -4,7 +4,7 @@
       <h2>Corporate Members</h2>
       <div>
         {% for image in site.static_files %}
-          {% if image.path contains 'image/member-logo' %}
+          {% if image.path contains 'image/member-logo-grey' %}
             <a href="#" class="member-logo">
               <img src="{{ site.github.url }}{{ image.path }}" alt="image" />
             </a>

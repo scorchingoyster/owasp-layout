@@ -14,6 +14,12 @@ site-wide reusable components styling
     display: flex;
     flex-wrap: wrap;
   }
+  a {
+    opacity: 1;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
 }
 
 .member-logo {
