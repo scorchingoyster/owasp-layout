@@ -16,8 +16,4 @@ permalink: /corporate
   <h2>OWASP Foundation Bylaws</h2>
   <p>The business of the OWASP Foundation Inc. is outlined in the organizational by-laws. These by-laws govern the organization worldwide and allow the participants to understand the established process for doing so.</p>
   
-  <p class="callout-mono right">There is a very famous saying that says that you should look to your right when you are facing left.</p>
-
-  <p class="callout-mono left">There is a very famous saying that says that you should look to your right when you are facing left.</p>
-
 </section>
