@@ -77,12 +77,52 @@ site-wide reusable components styling
     }
   }
   a {
+    color: $cta-blue;
     text-decoration: none;
+    &:hover {
+      color: lighten($cta-blue, 5%);
+    }
+    &:active {
+      color: darken($cta-blue, 10%);
+    }
+    &:visited {
+      color: darken($cta-blue, 25%);
+    }
   }
 }
 
+// standalone link block that takes up a whole line
 .callout-link {
   display: block;
   margin: $grid-val 0;
   font-family: 'ubuntu_medium', sans-serif;
+  color: $cta-blue;
+  text-decoration: none;
+  &:hover {
+    color: lighten($cta-blue, 5%);
+  }
+  &:active {
+    color: darken($cta-blue, 10%);
+  }
+}
+
+// quote styling, can be used with or without blockquote tag
+.callout-mono {
+  margin: $grid-val*1.5 0;
+  font-family: 'sharetech', monospace;
+  font-size: $font-size*2;
+  line-height: 1.3;
+  color: lighten(black, 50%);
+  &.right {
+    text-align: right;
+    padding-right: $grid-val*1.5;
+    border-right: 10px solid lighten(grey, 40%);
+    border-radius: $grid-val/2;
+  }
+  &.left {
+    text-align: left;
+    padding-left: $grid-val*1.5;
+    border-left: 10px solid lighten(grey, 40%);
+    border-radius: $grid-val/2;
+  }
 }
