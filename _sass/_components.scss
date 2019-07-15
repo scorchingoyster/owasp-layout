@@ -160,7 +160,7 @@ site-wide reusable components styling
   }
 }
 
-//
+// table component styling
 .table {
   thead {
     font-weight: 700;
@@ -168,5 +168,10 @@ site-wide reusable components styling
   * {
     padding: $grid-val/2;
     border: 2px solid lighten(grey, 30%);
+  }
+  tbody {
+    tr:nth-child(odd) {
+      background-color: whitesmoke;
+    }
   }
 }
