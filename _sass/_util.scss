@@ -77,28 +77,6 @@ $header-bp: $grid-val*34; // 1020px, header changes
   }
 }
 
-@mixin cta-button {
-  padding: 9px 15px;
-  border-width: 0;
-  border-radius: 4.5px;
-  background-color: $cta-blue;
-  font-size: $font-size;
-  color: white;
-  font-family: 'ubuntu', sans-serif;
-  text-decoration: none;
-  &:hover {
-    background-color: lighten($cta-blue, 5%);
-  }
-  &:active {
-    background-color: darken($cta-blue, 5%);
-  }
-
-}
-
-.cta-button {
-  @include cta-button;
-}
-
 @mixin no-bullet-list {
   margin: $grid-val/3 0;
   padding: 0;

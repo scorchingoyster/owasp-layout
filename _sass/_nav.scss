@@ -66,9 +66,6 @@ header, footer, mobile navigation menu
   .nav-button {
     margin-left: $grid-val/2;
   }
-  .nav-button > a {
-    @include cta-button;
-  }
   .nav-button > * + * {
     margin-left: $grid-val/3;
   }
@@ -176,7 +173,6 @@ header, footer, mobile navigation menu
   .nav-button {
     margin-top: $grid-val/3;
     & > a {
-      @include cta-button;
       margin-right: $grid-val/3;
     }
   }
@@ -201,39 +197,6 @@ header, footer, mobile navigation menu
   max-width: $grid-val * 5; // 210px
   img {
     width: 100%;
-  }
-}
-
-// banner styling
-#banner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: $grid-val $grid-val*1.5;
-  & > *,
-  & > * > * {
-    margin: 0;
-    padding: 0;
-    color: white;
-  }
-  a#close-banner {
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    font-size: $grid-val;
-    color: currentColor;
-    opacity: 0.2;
-    line-height: 0;
-    &:hover,
-    &:active {
-      opacity: 0.5;
-    }
-  }
-  &.notice {
-    background-color: $bg-blue;
-  }
-  &.warning {
-    background-color: #892727;
   }
 }
 

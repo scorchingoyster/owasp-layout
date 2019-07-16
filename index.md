@@ -31,7 +31,9 @@ permalink: /
 
 <section class="homepage-blog">
   <h2>New Website Uses GitHub</h2>
-  <p>New blog post example content. Talk about using GitHub for the new website. More text to follow in a second here. Describe the functionality and the awesome CSS.</p>
+  <!-- <img src="{{ site.github.url }}/assets/image/test-photo.png" alt=""> -->
+  <p>New blog post example content. Talk about using GitHub for the new website. More text to follow in a second here. Describe the functionality and the awesome CSS. New blog post example content. Talk about using GitHub for the new website. More text to follow in a second here. Describe the functionality and the awesome CSS. New blog post example content. Talk about using GitHub for the new website. More text to follow in a second here. Describe the functionality and the awesome CSS.</p>
+
 </section>
 
 {% include news-events.html %}

@@ -40,7 +40,14 @@ permalink: /sample
 <p style="font-size: 40px; background-color: whitesmoke;">Components</p>
 
 
-<button class="cta-button">This is a CTA button component</button>
+<button class="cta-button">This is a CTA button</button>
+
+<button class="cta-button dark">This is a dark CTA button</button>
+
+<button class="cta-button green">This is a green CTA button</button>
+
+<button class="cta-button grey">This is a grey CTA button</button>
+
 
 <a class="callout-link">This is a stand alone full-block link component</a>
 

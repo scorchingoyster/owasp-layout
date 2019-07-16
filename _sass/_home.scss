@@ -15,3 +15,9 @@ currently only used for homepage
     }
   }
 }
+
+.homepage-blog {
+  img {
+    max-width: $grid-val*3; // 90px
+  }
+}

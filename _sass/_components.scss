@@ -160,6 +160,52 @@ site-wide reusable components styling
   }
 }
 
+// call-to-action buttons
+.cta-button {
+  padding: 9px 15px;
+  border-width: 0;
+  border-radius: 4.5px;
+  font-size: $font-size;
+  color: white;
+  background-color: $cta-blue;
+  font-family: 'ubuntu', sans-serif;
+  text-decoration: none;
+  &:hover {
+    background-color: lighten($cta-blue, 5%);
+  }
+  &:active {
+    background-color: darken($cta-blue, 5%);
+  }
+  &.dark {
+    background-color: #444;
+    &:hover {
+      background-color: lighten(#444, 5%);
+    }
+    &:active {
+      background-color: darken(#444, 5%);
+    }
+  }
+  &.green {
+    background-color: #369505;
+    &:hover {
+      background-color: lighten(#369505, 2.5%);
+    }
+    &:active {
+      background-color: darken(#369505, 5%);
+    }
+  }
+  &.grey {
+    background-color: #BBB;
+    color: #222;
+    &:hover {
+      background-color: lighten(#BBB, 5%);
+    }
+    &:active {
+      background-color: darken(#BBB, 5%);
+    }
+  }
+}
+
 // table component styling
 .table {
   thead {
@@ -173,5 +219,38 @@ site-wide reusable components styling
     tr:nth-child(odd) {
       background-color: whitesmoke;
     }
+  }
+}
+
+// site-wide announcement banner styling
+#banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $grid-val $grid-val*1.5;
+  & > *,
+  & > * > * {
+    margin: 0;
+    padding: 0;
+    color: white;
+  }
+  a#close-banner {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: $grid-val;
+    color: currentColor;
+    opacity: 0.2;
+    line-height: 0;
+    &:hover,
+    &:active {
+      opacity: 0.5;
+    }
+  }
+  &.notice {
+    background-color: $bg-blue;
+  }
+  &.warning {
+    background-color: #892727;
   }
 }
