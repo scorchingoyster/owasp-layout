@@ -100,13 +100,14 @@ site-wide reusable components styling
   text-decoration: none;
   &:hover {
     color: lighten($cta-blue, 5%);
+    text-decoration: underline;
   }
   &:active {
     color: darken($cta-blue, 10%);
   }
 }
 
-// quote styling, can be used with or without blockquote tag
+// quote styling, can be used with or without blockquote
 .callout-mono {
   margin: $grid-val*1.5 0;
   font-family: 'sharetech', monospace;
@@ -127,7 +128,7 @@ site-wide reusable components styling
   }
 }
 
-//
+// full-width profile photo + copy component
 .profile-copy {
   display: inline-block;
   width: 100%;
@@ -166,10 +167,10 @@ site-wide reusable components styling
   border-width: 0;
   border-radius: 4.5px;
   font-size: $font-size;
-  color: white;
+  color: white !important;
   background-color: $cta-blue;
   font-family: 'ubuntu', sans-serif;
-  text-decoration: none;
+  text-decoration: none !important;
   &:hover {
     background-color: lighten($cta-blue, 5%);
   }

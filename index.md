@@ -30,9 +30,10 @@ permalink: /
 </section>
 
 <section class="homepage-blog">
-  <h2>New Website Uses GitHub</h2>
-  <!-- <img src="{{ site.github.url }}/assets/image/test-photo.png" alt=""> -->
-  <p>New blog post example content. Talk about using GitHub for the new website. More text to follow in a second here. Describe the functionality and the awesome CSS. New blog post example content. Talk about using GitHub for the new website. More text to follow in a second here. Describe the functionality and the awesome CSS. New blog post example content. Talk about using GitHub for the new website. More text to follow in a second here. Describe the functionality and the awesome CSS.</p>
+  <h2><a href="#">New Website Uses GitHub</a></h2>
+  <img src="{{ site.github.url }}/assets/image/test-photo.png" alt="">
+  <p class="author"><a>Joey Michael</a></p>
+  <p>New blog post example content. Talk about using GitHub for the new website. More text to follow in a second here. Describe the functionality and the awesome CSS. New blog post example content. Talk about using GitHub for the new website. More text to follow in a second here. Describe the functionality and the awesome CSS... <a href="#">Read more</a> </p>
 
 </section>
 

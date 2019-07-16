@@ -27,6 +27,18 @@ code {
   font-family: 'sharetech', monospace;
 }
 
+a {
+  color: $cta-blue;
+  text-decoration: none;
+  &:hover {
+    color: lighten($cta-blue, 5%);
+    text-decoration: underline;
+  }
+  &:active {
+    color: darken($cta-blue, 10%);
+  }
+}
+
 // basic layout spec
 .header-wrapper,
 .main-wrapper,

@@ -17,7 +17,33 @@ currently only used for homepage
 }
 
 .homepage-blog {
+  .author {
+    padding-left: $grid-val/3;
+    border-left: 5px solid lighten($cta-blue, 40%);
+    &:hover {
+      border-color: $cta-blue;
+    }
+    &:active {
+      border-color: darken($cta-blue, 10%);
+    }
+    & > a {
+      color: $cta-blue;
+      text-decoration: none;
+      &:hover {
+        color: lighten($cta-blue, 5%);
+      }
+      &:active {
+        color: darken($cta-blue, 10%);
+      }
+      &:visited {
+        color: darken($cta-blue, 25%);
+      }
+    }
+  }
   img {
+    float: right;
     max-width: $grid-val*3; // 90px
+    margin: $grid-val/10 $grid-val/3; 
+    border: 1px solid whitesmoke;
   }
 }
