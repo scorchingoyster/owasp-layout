@@ -10,8 +10,8 @@ $(document).ready(function() {
   // element hiding CSS utility classes
   // use hideEl for hiding elements from only the SIGHTED USERS
   // use removeEl for hiding elements from EVERYONE
-  var hideEl = "hide-el";
-  var removeEl = "remove-el";
+  var hideEl = "hide-el",
+      removeEl = "remove-el";
 
   // close announcement banner
   $("#close-banner").click(function() {
@@ -38,25 +38,44 @@ $(document).ready(function() {
     $("#overlay").toggleClass(removeEl);
   });
 
-  // load and select sub-menu navigation
+  // give first tab in sub-menu a current class by default
   $(".sub-nav li:first-child>a").addClass("current");
 
+  // detect hash ID and load corresponding tab
+  if (window.location.hash != "") {
+    var pageTab = window.location.hash,
+        x = window.pageXOffset,
+        y = window.pageYOffset;
+    $(window).one("load", function () {
+        $(".tab-link").removeClass("current");
+        $(pageTab+"-link").addClass("current");
+        $(".sub-nav").siblings(".tab").addClass(removeEl);
+        $(pageTab).toggleClass(removeEl);
+        $(window).one('scroll', function () {
+            window.scrollTo(x, y);
+        })
+    });
+  }
 
+  // show and hide tabs based on sub-menu item clicked
   $(".tab-link").click(function(e) {
     e.preventDefault();
+    var x = window.pageXOffset,
+        y = window.pageYOffset;
     $(".tab-link").removeClass("current");
     $("#"+this.id).addClass("current");
     $(".sub-nav").siblings(".tab").addClass(removeEl);
     $("#" + (this.id.replace("-link",""))).toggleClass(removeEl);
-    // window.location.hash = $(this).attr("id").replace("-link","");
-    // $(window).scrollTop(0);
+    window.location.hash = $(this).attr("id").replace("-link","");
+    $(window).one('scroll', function () {
+        window.scrollTo(x, y);
+    })
   });
 
   // show dropdown
   $(".top-nav > ul li").hover(function() {
     $(this).children(".dropdown-menu").toggleClass(hideEl);
   });
-
 
 });
 
