@@ -43,18 +43,14 @@ $(document).ready(function() {
 
   // detect hash ID and load corresponding tab
   if (window.location.hash != "") {
-    var pageTab = window.location.hash,
-        x = window.pageXOffset,
-        y = window.pageYOffset;
-    $(window).one("load", function () {
-        $(".tab-link").removeClass("current");
-        $(pageTab+"-link").addClass("current");
-        $(".sub-nav").siblings(".tab").addClass(removeEl);
-        $(pageTab).toggleClass(removeEl);
-        $(window).one('scroll', function () {
-            window.scrollTo(x, y);
-        })
-    });
+    var pageTab = window.location.hash;
+    $(".tab-link").removeClass("current");
+    $(pageTab+"-link").addClass("current");
+    $(".sub-nav").siblings(".tab").addClass(removeEl);
+    $(pageTab).toggleClass(removeEl);
+    $(window).one('scroll', function () {
+        window.scrollTo(0, 0);
+    })
   }
 
   // show and hide tabs based on sub-menu item clicked
