@@ -37,7 +37,7 @@ header, footer, mobile navigation menu
 
 .site-search {
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
   align-items: center;
   min-width: $grid-val * 7;
   & > span {
