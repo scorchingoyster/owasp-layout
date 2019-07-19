@@ -58,14 +58,15 @@ $(document).ready(function() {
     e.preventDefault();
     var x = window.pageXOffset,
         y = window.pageYOffset;
+    $(window).one('scroll', function () {
+        window.scrollTo(x, y);
+    })
     $(".tab-link").removeClass("current");
     $("#"+this.id).addClass("current");
     $(".sub-nav").siblings(".tab").addClass(removeEl);
     $("#" + (this.id.replace("-link",""))).toggleClass(removeEl);
     window.location.hash = $(this).attr("id").replace("-link","");
-    $(window).one('scroll', function () {
-        window.scrollTo(x, y);
-    })
+    
   });
 
   // show dropdown

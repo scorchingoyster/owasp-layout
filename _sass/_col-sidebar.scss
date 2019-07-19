@@ -29,6 +29,10 @@
 }
 
 .tab {
+  // noted for potential accessibility change
+  &:focus {
+    outline: 0;
+  }
 }
 
 .page-title {
