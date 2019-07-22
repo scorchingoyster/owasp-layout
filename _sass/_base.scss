@@ -47,10 +47,10 @@ a {
   max-width: $grid-val * 43; // 30 * 43 = 1290px
   width: 100%;
   margin: 0 auto;
-  padding: 0 $grid-val;
+  padding: 0 30px;
   & > * {
-    margin-left: $grid-val/2;
-    margin-right: $grid-val/2;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 
