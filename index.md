@@ -7,7 +7,9 @@ permalink: /
 ---
 
 <div class="homepage-promo">
-  <img src="https://via.placeholder.com/400x400" alt="">
+  <a href="">
+    <img src="https://via.placeholder.com/400x400" alt="">
+  </a>
 </div>
 
 <section class="homepage-welcome">
@@ -18,20 +20,20 @@ permalink: /
 </section>
 
 <section class="homepage-project">
-  <h2>Spotlight: Zed Attack Proxy</h2>
-  <img src="https://via.placeholder.com/400x200" alt="">
+  <h2><a>Spotlight: Zed Attack Proxy</a></h2>
+  <a><img src="https://via.placeholder.com/400x200" alt=""></a>
   <p></p>
 </section>
 
 <section class="homepage-chapter">
-  <h2>Featured Chapter: London</h2>
-  <img src="https://via.placeholder.com/400x200" alt="">
+  <h2><a>Featured Chapter: London</a></h2>
+  <a><img src="https://via.placeholder.com/400x200" alt=""></a>
   <p>Welcome to the London chapter homepage. The chapter board is Sam Stepanyan, Sherif Mansour Farag and Andra Lezza. Follow chapter news on Facebook at https://www.facebook.com/OWASPLondon , Twitter at http://twitter.com/owasplondon.</p>
 </section>
 
 <section class="homepage-blog">
   <h2><a href="#">New Website Uses GitHub</a></h2>
-  <img src="{{ site.github.url }}/assets/image/test-photo.png" alt="">
+  <a><img src="{{ site.github.url }}/assets/image/test-photo.png" alt=""></a>
   <p class="author"><a>Joey Michael</a></p>
   <p>New blog post example content. Talk about using GitHub for the new website. More text to follow in a second here. Describe the functionality and the awesome CSS. New blog post example content. Talk about using GitHub for the new website. More text to follow in a second here. Describe the functionality and the awesome CSS... <a href="#">Read more</a> </p>
 

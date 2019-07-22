@@ -235,6 +235,9 @@ site-wide reusable components styling
     padding: 0;
     color: white;
   }
+  a {
+    text-decoration: underline;
+  }
   a#close-banner {
     position: absolute;
     right: 15px;

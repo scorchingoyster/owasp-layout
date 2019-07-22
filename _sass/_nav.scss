@@ -236,6 +236,7 @@ header, footer, mobile navigation menu
 
 @media screen and (max-width: $content-bp) {
   .main-wrapper,
+  .header-wrapper,
   .member-wrapper,
   .footer-wrapper {
     & > * {

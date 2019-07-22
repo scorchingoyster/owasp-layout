@@ -16,6 +16,12 @@ currently only used for homepage
   }
 }
 
+.homepage-promo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .homepage-blog {
   .author {
     padding-left: $grid-val/3;
