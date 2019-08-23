@@ -12,6 +12,8 @@ permalink: /
   </a>
 </div>
 
+<hr class="mobile">
+
 <section class="homepage-welcome">
   <h1>What is the OWASP Foundation?</h1>
   <p>The OWASP Foundation came online on December 1st, 2001 <em>it was established as a not-for-profit charitable</em>
@@ -19,17 +21,23 @@ permalink: /
   <a href="" class="callout-link">Find a local chapter</a>
 </section>
 
+<hr>
+
 <section class="homepage-project">
   <h2><a>Spotlight: Zed Attack Proxy</a></h2>
   <a><img src="https://via.placeholder.com/400x200" alt=""></a>
   <p></p>
 </section>
 
+<hr class="mobile">
+
 <section class="homepage-chapter">
   <h2><a>Featured Chapter: London</a></h2>
   <a><img src="https://via.placeholder.com/400x200" alt=""></a>
   <p>Welcome to the London chapter homepage. The chapter board is Sam Stepanyan, Sherif Mansour Farag and Andra Lezza. Follow chapter news on Facebook at https://www.facebook.com/OWASPLondon , Twitter at http://twitter.com/owasplondon.</p>
 </section>
+
+<hr>
 
 <section class="homepage-blog">
   <h2><a href="#">New Website Uses GitHub</a></h2>
@@ -38,5 +46,7 @@ permalink: /
   <p>New blog post example content. Talk about using GitHub for the new website. More text to follow in a second here. Describe the functionality and the awesome CSS. New blog post example content. Talk about using GitHub for the new website. More text to follow in a second here. Describe the functionality and the awesome CSS... <a href="#">Read more</a> </p>
 
 </section>
+
+<hr class="mobile">
 
 {% include news-events.html %}
